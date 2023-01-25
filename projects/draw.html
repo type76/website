@@ -1,0 +1,92 @@
+<!-- http://jsfiddle.net/y24su/ -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+    <title>q draw</title>
+    <style>
+    * {margin: 0; padding: 0;}
+    html { user-select:none; font-family: monospace;
+        background-color: #666;}
+        body { overflow: hidden; height: 100%; width: 100%; }
+    </style>
+
+
+</head>
+<body>
+
+    <canvas id="drawcanvas"></canvas>
+
+    <script>
+    var X = [],
+    Y = [],
+    i = -1;
+
+    var isMouseDown = false;
+
+    var drawcanvas = document.getElementById('drawcanvas');
+    drawcanvas.width = window.innerWidth;
+    drawcanvas.height = window.innerHeight;
+    context = drawcanvas.getContext('2d');
+
+
+// events
+function mouseup() {
+    isMouseDown = false;
+    ++i;
+    X = [];
+    Y = [];
+    i = -1;
+}
+
+function mousedown(e) {
+    e.preventDefault();
+    isMouseDown = true;
+}
+
+
+function mousemove(e) {
+    if (isMouseDown){
+
+        ++i;
+        X[i] = e.pageX;
+        Y[i] = e.pageY;
+        var x1 = X[i-2];
+        var y1 = Y[i-2];
+        var x2 = X[i-1];
+        var y2 = Y[i-1];
+        var x3 = X[i];
+        var y3 = Y[i];
+        var mid1x = (x1 + x2)/2;
+        var mid1y = (y1 + y2)/2;
+        var mid2x = (x2 + x3)/2;
+        var mid2y = (y2 + y3)/2;
+
+        if(i>1) {
+            drawQuadraticThreePoints(mid1x, mid1y, x2, y2, mid2x, mid2y);
+        }
+    }// if mousedown
+}
+
+// events
+    document.addEventListener('mouseup', mouseup, false);
+    drawcanvas.addEventListener('mousedown', mousedown, true);
+    drawcanvas.addEventListener('mousemove', mousemove, true);
+//
+    drawcanvas.addEventListener( 'touchmove', mousemove, true );
+    drawcanvas.addEventListener( 'touchstart', mousedown, true );
+    document.addEventListener( 'touchend', mouseup, true );
+
+    function drawQuadraticThreePoints (x1,y1,x2,y2,x3,y3, distance, velocity) {
+        context.strokeStyle = 0x000000;
+        context.lineWidth   = 10;  
+        context.beginPath();
+        context.moveTo(x1,y1);
+        context.quadraticCurveTo(x2,y2,x3,y3);
+        context.stroke();
+    }
+</script>
+
+</body>
+</html>

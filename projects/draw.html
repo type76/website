@@ -1,10 +1,9 @@
-<!-- http://jsfiddle.net/y24su/ -->
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta content='width=device-width, initial-scale=1' name='viewport'/>
-    <title>q draw</title>
+    <title>draw</title>
     <style>
     * {margin: 0; padding: 0;}
     html { user-select:none; font-family: monospace;
@@ -70,13 +69,9 @@ function mousemove(e) {
 }
 
 // events
-    document.addEventListener('mouseup', mouseup, false);
-    drawcanvas.addEventListener('mousedown', mousedown, true);
-    drawcanvas.addEventListener('mousemove', mousemove, true);
-//
-    drawcanvas.addEventListener( 'touchmove', mousemove, true );
-    drawcanvas.addEventListener( 'touchstart', mousedown, true );
-    document.addEventListener( 'touchend', mouseup, true );
+    document.addEventListener( 'pointermove', mousemove, true );
+    document.addEventListener( 'pointerdown', mousedown, true );
+    document.addEventListener( 'pointerup', mouseup, true );
 
     function drawQuadraticThreePoints (x1,y1,x2,y2,x3,y3, distance, velocity) {
         context.strokeStyle = 0x000000;

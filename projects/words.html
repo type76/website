@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+	body {font-family: monospace;
+		margin: 0; padding: 0;}
+	.centered {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 90vh;
+		font-size: 2em;
+	}  
+	#hud {
+		display: block;
+		position: absolute;
+		width: 100%;
+		margin: 0 auto;
+		bottom: 0;
+		left: 0;
+		text-align: center;
+	}
+	#xhud {
+		display: block;
+		position: absolute;
+		width: 100%;
+		margin: 0 auto;
+		top: 0;
+		left: 0;
+		padding: 1em;
+	}
+	#xslider {
+		display: block;
+		width: 200px;
+		margin: 1em auto;
+	}
+	#xspeed {position: absolute; bottom: 0; right: 3em;}
+	#xinput {display: block; background-color: #eee;
+		text-align: left; margin-bottom: 1em;}
+
+</style>
+</head>
+<body>
+
+	<div id="xhud">	
+			<textarea name="input" id="xinput" class="input" spellcheck="false">
+			</textarea>
+			<input type="submit" name="submit" id="rsubmit" onclick="xsubmit(xinput.value)">
+    </div>
+
+	<p class="centered" id="xvar">hello</p>
+	
+	<div id="hud">
+    	<input id="xslider" type="range" value="0.05" min="0.005" max="0.2" step="0.001" title="speed" oninput="speed = value; document.getElementById('xspeed').textContent = value;" />
+		<p id="xspeed">0.05</p>
+    </div>
+
+	<script type="text/javascript">
+	var str = "I like turtles. Do you? Awesome! hahaha. lol!!! What's going on????";
+	var result = str.split(" ");
+	var speed = 0.05;
+	var num = 0;
+	var xnum = 0;
+
+	/* change text */
+	function xsubmit(argument) {
+		str = argument.trim();
+		result = str.split(" ");
+		// console.log(result);
+	}
+
+	/* render loop */
+	function animate() {
+		num++;
+		xnum = Math.floor( ( num * speed ) % result.length ) ;
+		document.getElementById("xvar").textContent = result[xnum];
+		requestAnimationFrame( animate );
+	}
+
+	/* start */
+	animate();
+</script>
+</body>
+</html>

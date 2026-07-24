@@ -1,16 +1,25 @@
 name: Update Image List
 on:
-  push
+  push:
+    branches: [ main ]  # Runs only on pushes to main branch
 jobs:
   updateImageList:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - shell: bash
-        run: ls -Rpm1 ./img/ > images.txt
-      - name: Save changes
-        uses: actions-go/push@v1
+
+      - name: Generate image list
+        shell: bash
+        run: |
+          if [ -d "./img" ]; then
+            find ./img -type f \( -iname "*.jpg" -o -iname "*.png" -o -iname "*.gif" -o -iname "*.mp4" -o -iname "*.webm" \) -printf "%f\n" > images.txt
+          else
+            echo "# No images found" > images.txt
+          fi
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          force: true
-          commit-files: images.txt
-          commit-message: "Updating image list"
+          commit_message: "Update image list"
+          file_pattern: images.txt
+          commit_author: "GitHub Actions <actions@github.com>"

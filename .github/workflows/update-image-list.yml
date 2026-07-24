@@ -1,0 +1,16 @@
+name: Update Image List
+on:
+  push
+jobs:
+  updateImageList:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - shell: bash
+        run: ls -Rpm1 ./img/ > images.txt
+      - name: Save changes
+        uses: actions-go/push@v1
+        with:
+          force: true
+          commit-files: images.txt
+          commit-message: "Updating image list"

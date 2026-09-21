@@ -15,86 +15,87 @@
 </script>
 
 <style>
-@font-face {
-  font-family: 'iAWriterDuoS';
-  src: url('font/iAWriterDuoS-Regular.woff2') format('woff2'),
-       url('font/iAWriterDuoS-Regular.woff') format('woff'),
-       url('font/iAWriterDuoS-Regular.eot') format('embedded-opentype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-* {
-  margin: 0;
-  padding: 0;
-}
-html {
-  background: #000;
-}
-button {
-  border: none;
-  outline: none;
-}
-body {
-  font-family: 'iAWriterDuoS';
-  color: #fff;
-  background: #000;
-  background-size: cover;
-  user-select: none;
-  height: 100vh;
-}
-h1, h2, h3, h4, h5 {
-  font-weight: lighter;
-}
-h1 {
-  font-size: 22px;
-}
-h2 {
-  font-size: 16px;
-  margin-bottom: 10px;
-}
-a {
-  text-decoration: none;
-  color: #fff;
-}
-a:hover {
-  color: #fff;
-  transition-timing-function: ease-out;
-  transition-duration: 200ms;
-}
-p {
-  margin: 0;
-}
-header, #content {
-  display: block;
-  width: 500px;
-  min-height: 90px;
-  margin: 0 auto 20px auto;
-}
-header {
-  margin-top: 40px;
-}
-header h1 {
-  margin-bottom: 8px;
-}
-header p {
-  display: block;
-  width: 100%;
-  font-size: 14px;
-  line-height: 20px;
-}
-#content img, #content video {
-  max-width: 500px;
-  height: auto;
-}
-iframe, .reel {
-  display: block;
-  max-width: 500px;
-  margin: 0 auto;
-}
-.pink {
-  color: #d2106b;
-}
+ @font-face {
+            font-family: 'iAWriterDuoS';
+            src: url('font/iAWriterDuoS-Regular.woff2') format('woff2'),
+                 url('font/iAWriterDuoS-Regular.woff') format('woff'),
+                 url('font/iAWriterDuoS-Regular.eot') format('embedded-opentype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #121212;
+            color: #e0ddd7;
+            font-family: 'iAWriterDuoS', 'Courier New', monospace;
+            font-size: 1.1rem;
+            line-height: 1.7;
+            padding: 2.5rem 1.5rem;
+            max-width: 720px;
+            margin: 0 auto;
+            min-height: 100vh;
+        }
+
+        #content {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        #content h3 {
+            font-weight: 400;
+            color: #f0ede8;
+            margin: 1.8rem 0 0.4rem 0;
+            font-size: 1rem;
+            opacity: 0.7;
+        }
+
+        #content img,
+        #content video {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        iframe {
+            margin: 0 !important;
+            padding: 0;
+        }
+
+        .footnote, nav {
+            color: #6a6a6a;
+            font-size: 0.85rem;
+            margin-top: 2.5rem;
+            border-top: 1px solid #2a2a2a;
+            padding-top: 1.5rem;
+            text-align: center;
+        }
+        nav {
+            border:none;
+            padding: 0;
+            margin: 0 0 20px 0;
+        }
+        nav a {
+            text-decoration: none;
+            color: #ff0000;
+            margin:0 10px;
+        }
+        nav a:hover {
+            color: #fff;
+        }
+        #logo {
+            width: 100%;
+            padding: 0;
+            margin: 0 auto;
+            text-align: center;
+        }
 </style>
 </head>
 <body>

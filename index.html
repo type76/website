@@ -1,52 +1,70 @@
 <!DOCTYPE html>
-<html>
-<head lang="en">
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=700">
+<title>io76</title>
 
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-77CW9KDRNS"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-77CW9KDRNS');
 </script>
-	
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name=viewport content='width=700'>
-<meta charset="utf-8">
-<title>io76</title>
 
-<style type="text/css">
+<style>
 @font-face {
-	font-family: 'iAWriterDuoS';
-	src: url('font/iAWriterDuoS-Regular.woff2') format('woff2'),
-		 url('font/iAWriterDuoS-Regular.woff') format('woff'),
-		 url('font/iAWriterDuoS-Regular.eot') format('embedded-opentype');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
+  font-family: 'iAWriterDuoS';
+  src: url('font/iAWriterDuoS-Regular.woff2') format('woff2'),
+       url('font/iAWriterDuoS-Regular.woff') format('woff'),
+       url('font/iAWriterDuoS-Regular.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
-*{margin: 0; padding: 0;}
-html {background: #000;}
-button {border:none; outline:none;}
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  background: #000;
+}
+button {
+  border: none;
+  outline: none;
+}
 body {
   font-family: 'iAWriterDuoS';
-  color:#fff;
+  color: #fff;
   background: #000;
   background-size: cover;
-  user-select:none;
+  user-select: none;
   height: 100vh;
 }
-h1, h2, h3, h4 ,h5 { font-weight: lighter; }
-h1 {font-size: 22px;}
-h2 {font-size: 16px; margin-bottom: 10px; }
-a {text-decoration: none; color:#fff;}
-a:hover {color: #fff;
-transition-timing-function: ease-out; 
-transition-duration: 200ms;
+h1, h2, h3, h4, h5 {
+  font-weight: lighter;
 }
-p {margin: 0;}
+h1 {
+  font-size: 22px;
+}
+h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+a:hover {
+  color: #fff;
+  transition-timing-function: ease-out;
+  transition-duration: 200ms;
+}
+p {
+  margin: 0;
+}
 header, #content {
   display: block;
   width: 500px;
@@ -54,197 +72,211 @@ header, #content {
   margin: 0 auto 20px auto;
 }
 header {
-	margin-top: 40px;
+  margin-top: 40px;
 }
-header h1 {margin-bottom: 8px;}
+header h1 {
+  margin-bottom: 8px;
+}
 header p {
-  margin: 0px;
   display: block;
   width: 100%;
-  font-size: 12px;
-  line-height: 20px;
   font-size: 14px;
+  line-height: 20px;
 }
 #content img, #content video {
   max-width: 500px;
   height: auto;
 }
 iframe, .reel {
-	display: block;
-	max-width: 500px;
-	margin:  0 auto;
+  display: block;
+  max-width: 500px;
+  margin: 0 auto;
 }
-.pink {color: #d2106b;}
+.pink {
+  color: #d2106b;
+}
 </style>
 </head>
 <body>
 
 <header id="mv">
   <h1>io76.com</h1>
-	<p><a href="mailto:serious.kabisa@gmail.com">contact</a></p>
+  <p><a href="mailto:serious.kabisa@gmail.com">contact</a></p>
 </header>
 
-<div class="reel">  
-	
-	<video controls loop poster="reel/showreel.jpg">
-		<source src="reel/showreel.mp4" type="video/mp4">
-	</video>
-
-	<iframe width="500" height="315" src="https://www.youtube.com/embed/LPnfE-D7_7c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</div>
-  
 <div id="content">
-    <img src="img/blue-book-1.png">
+  <h3 id="reel">Reel</h3>
+  <video controls loop poster="https://io76.com/reel/showreel.jpg" width="100%">
+    <source src="https://io76.com/reel/showreel.mp4" type="video/mp4">
+  </video>
 
-    <video controls loop poster="img/future-pre.jpg">
-        <source src="img/future.mp4" type="video/mp4">
-        <source src="img/future.webm" type="video/webm">
-    </video>
+  <h3 id="mongsters">Mongsters</h3>
+  <iframe width="100%" height="315" src="https://www.youtube.com/embed/LPnfE-D7_7c" frameborder="0" allowfullscreen style="border-radius:4px; margin-top:1rem;"></iframe>
 
-    <video controls loop poster="img/love.jpg">
-        <source src="img/love.mp4" type="video/mp4">
-        <source src="img/love.webm" type="video/webm">
-    </video>
+  <h3 id="blue-book-1">Blue-Book-1</h3>
+  <p><img src="https://io76.com/img/blue-book-1.png" alt="blue-book-1"></p>
+  <h3 id="yellow-book-t">Yellow-Book-T</h3>
+  <p><img src="https://io76.com/img/yellow-book-t.jpg" alt="yellow-book-t"></p>
+  <h3 id="poster-baby">Poster-Baby</h3>
+  <p><img src="https://io76.com/img/poster-baby.jpg" alt="poster-baby"></p>
+  <h3 id="poster-girl">Poster-Girl</h3>
+  <p><img src="https://io76.com/img/poster-girl.jpg" alt="poster-girl"></p>
+  <h3 id="referral-top">Referral-Top</h3>
+  <p><img src="https://io76.com/img/referral-top.jpg" alt="referral-top"></p>
+  <h3 id="road-show-poster">Road-Show-Poster</h3>
+  <p><img src="https://io76.com/img/road-show-poster.gif" alt="road-show-poster"></p>
 
-    <video controls loop poster="img/kuchapa.jpg">
-        <source src="img/kuchapa.mp4" type="video/mp4">
-        <source src="img/kuchapa.webm" type="video/webm">
-    </video>
+  <h3 id="future-animation">Future - Animation</h3>
+  <video controls loop poster="https://io76.com/img/future-pre.jpg" width="100%">
+    <source src="https://io76.com/img/future.mp4" type="video/mp4">
+    <source src="https://io76.com/img/future.webm" type="video/webm">
+  </video>
 
+  <h3 id="love-animation">Love - Animation</h3>
+  <video controls loop poster="https://io76.com/img/love.jpg" width="100%">
+    <source src="https://io76.com/img/love.mp4" type="video/mp4">
+    <source src="https://io76.com/img/love.webm" type="video/webm">
+  </video>
 
-    <img src="img/yellow-book-t.jpg" />
+  <h3 id="kuchapa-animation">Kuchapa - Animation</h3>
+  <video controls loop poster="https://io76.com/img/kuchapa.jpg" width="100%">
+    <source src="https://io76.com/img/kuchapa.mp4" type="video/mp4">
+    <source src="https://io76.com/img/kuchapa.webm" type="video/webm">
+  </video>
 
-    <img src="img/poster-baby.jpg" />
+  <h3 id="aug">Aug</h3>
+  <p><img src="https://io76.com/img/aug.jpg" alt="aug"></p>
+  <h3 id="bg1">Bg1</h3>
+  <p><img src="https://io76.com/img/bg1.jpg" alt="bg1"></p>
+  <h3 id="bg2">Bg2</h3>
+  <p><img src="https://io76.com/img/bg2.jpg" alt="bg2"></p>
+  <h3 id="bg3">Bg3</h3>
+  <p><img src="https://io76.com/img/bg3.jpg" alt="bg3"></p>
+  <h3 id="bg4">Bg4</h3>
+  <p><img src="https://io76.com/img/bg4.jpg" alt="bg4"></p>
+  <h3 id="bg5">Bg5</h3>
+  <p><img src="https://io76.com/img/bg5.jpg" alt="bg5"></p>
+  <h3 id="ccr-pdf">Ccr-Pdf</h3>
+  <p><img src="https://io76.com/img/ccr-pdf.png" alt="ccr-pdf"></p>
+  <h3 id="comic-p2">Comic-P2</h3>
+  <p><img src="https://io76.com/img/comic-p2.jpg" alt="comic-p2"></p>
+  <h3 id="comic-p4">Comic-P4</h3>
+  <p><img src="https://io76.com/img/comic-p4.jpg" alt="comic-p4"></p>
+  <h3 id="dec">Dec</h3>
+  <p><img src="https://io76.com/img/dec.jpg" alt="dec"></p>
+  <h3 id="anthrax1">Anthrax1</h3>
+  <p><img src="https://io76.com/img/anthrax1.jpg" alt="anthrax1"></p>
+  <h3 id="anthrax2">Anthrax2</h3>
+  <p><img src="https://io76.com/img/anthrax2.jpg" alt="anthrax2"></p>
+  <h3 id="anthrax3">Anthrax3</h3>
+  <p><img src="https://io76.com/img/anthrax3.jpg" alt="anthrax3"></p>
+  <h3 id="dreamfish">Dreamfish</h3>
+  <p><img src="https://io76.com/img/dreamfish.jpg" alt="dreamfish"></p>
+  <h3 id="ecotz">Ecotz</h3>
+  <p><img src="https://io76.com/img/ecotz.png" alt="ecotz"></p>
+  <h3 id="efta-after">Efta-After</h3>
+  <p><img src="https://io76.com/img/efta-after.jpg" alt="efta-after"></p>
+  <h3 id="jam">Jam</h3>
+  <p><img src="https://io76.com/img/jam.png" alt="jam"></p>
+  <h3 id="jun">Jun</h3>
+  <p><img src="https://io76.com/img/jun.jpg" alt="jun"></p>
+  <h3 id="lake-natron">Lake-Natron</h3>
+  <p><img src="https://io76.com/img/lake-natron.png" alt="lake-natron"></p>
+  <h3 id="man">Man</h3>
+  <p><img src="https://io76.com/img/man.jpg" alt="man"></p>
+  <h3 id="mar">Mar</h3>
+  <p><img src="https://io76.com/img/mar.jpg" alt="mar"></p>
+  <h3 id="market-driver">Market-Driver</h3>
+  <p><img src="https://io76.com/img/market-driver.jpg" alt="market-driver"></p>
+  <h3 id="mawemawe">Mawemawe</h3>
+  <p><img src="https://io76.com/img/mawemawe.png" alt="mawemawe"></p>
+  <h3 id="moivaro-t">Moivaro-T</h3>
+  <p><img src="https://io76.com/img/moivaro-t.jpg" alt="moivaro-t"></p>
+  <h3 id="moivaro">Moivaro</h3>
+  <p><img src="https://io76.com/img/moivaro.jpg" alt="moivaro"></p>
+  <h3 id="njiro_complex">Njiro_Complex</h3>
+  <p><img src="https://io76.com/img/njiro_complex.gif" alt="njiro_complex"></p>
+  <h3 id="oct">Oct</h3>
+  <p><img src="https://io76.com/img/oct.jpg" alt="oct"></p>
+  <h3 id="poster-2013">Poster-2013</h3>
+  <p><img src="https://io76.com/img/poster-2013.jpg" alt="poster-2013"></p>
 
-    <img src="img/poster-girl.jpg" />
+  <h3 id="cacto-animation">Cacto - Animation</h3>
+  <video controls loop poster="https://io76.com/img/cacto.jpg" width="100%">
+    <source src="https://io76.com/img/cacto.mp4" type="video/mp4">
+    <source src="https://io76.com/img/cacto.webm" type="video/webm">
+  </video>
 
-    <img src="img/referral-top.jpg" />
+  <h3 id="harmony-animation">Harmony - Animation</h3>
+  <video controls loop poster="https://io76.com/img/harmony.jpg" width="100%">
+    <source src="https://io76.com/img/harmony.mp4" type="video/mp4">
+    <source src="https://io76.com/img/harmony.webm" type="video/webm">
+  </video>
 
-    <img src="img/road-show-poster.gif" />
+  <h3 id="sangananu-card">Sangananu - Card</h3>
+  <p><img src="https://io76.com/img/sangananu-card.jpg" alt="sangananu-card"></p>
+  <h3 id="square-poster">Square - Poster</h3>
+  <p><img src="https://io76.com/img/square-poster.jpg" alt="square-poster"></p>
 
-    <img src="img/aug.jpg" />
+  <h3 id="robot-animation">Robot - Animation</h3>
+  <video controls loop poster="https://io76.com/img/robot-preview.jpg" width="100%">
+    <source src="https://io76.com/img/robot.mp4" type="video/mp4">
+    <source src="https://io76.com/img/robot.webm" type="video/webm">
+  </video>
 
-    <img src="img/bg1.jpg" />
+  <h3 id="stick-animation">Stick - Animation</h3>
+  <video controls loop poster="https://io76.com/img/stick-loop.jpg" width="100%">
+    <source src="https://io76.com/img/stick-loop.mp4" type="video/mp4">
+    <source src="https://io76.com/img/stick-loop.webm" type="video/webm">
+  </video>
 
-    <img src="img/bg2.jpg" />
+  <h3 id="stressed_ecard-animation">Stressed_Ecard - Animation</h3>
+  <video controls loop poster="https://io76.com/img/stressed_ecard.jpg" width="100%">
+    <source src="https://io76.com/img/stressed_ecard.mp4" type="video/mp4">
+    <source src="https://io76.com/img/stressed_ecard.webm" type="video/webm">
+  </video>
 
-    <img src="img/bg3.jpg" />
+  <h3 id="sv1">Sv1</h3>
+  <p><img src="https://io76.com/img/sv1.jpg" alt="sv1"></p>
+  <h3 id="sv2">Sv2</h3>
+  <p><img src="https://io76.com/img/sv2.jpg" alt="sv2"></p>
+  <h3 id="sv3">Sv3</h3>
+  <p><img src="https://io76.com/img/sv3.jpg" alt="sv3"></p>
+  <h3 id="sv4">Sv4</h3>
+  <p><img src="https://io76.com/img/sv4.jpg" alt="sv4"></p>
+  <h3 id="sv5">Sv5</h3>
+  <p><img src="https://io76.com/img/sv5.jpg" alt="sv5"></p>
 
-    <img src="img/bg4.jpg" />
+  <h3 id="tazama-animation">Tazama - Animation</h3>
+  <video controls loop poster="https://io76.com/img/tazama.gif" width="100%">
+    <source src="https://io76.com/img/tazama.mp4" type="video/mp4">
+    <source src="https://io76.com/img/tazama.webm" type="video/webm">
+  </video>
 
-    <img src="img/bg5.jpg" />
+  <h3 id="treetop-logo">Treetop-Logo</h3>
+  <p><img src="https://io76.com/img/treetop-logo.jpg" alt="treetop-logo"></p>
+  <h3 id="treetops-banner-v2">Treetops-Banner-V2</h3>
+  <p><img src="https://io76.com/img/treetops-banner-v2.jpg" alt="treetops-banner-v2"></p>
+  <h3 id="p4">P4</h3>
+  <p><img src="https://io76.com/img/p4.jpg" alt="p4"></p>
+  <h3 id="ulla-nova-wide">Ulla-Nova-Wide</h3>
+  <p><img src="https://io76.com/img/ulla-nova-wide.gif" alt="ulla-nova-wide"></p>
+  <h3 id="umoja">Umoja</h3>
+  <p><img src="https://io76.com/img/umoja.jpg" alt="umoja"></p>
 
-    <video controls loop poster="img/cacto.jpg">
-        <source src="img/cacto.mp4" type="video/mp4">
-        <source src="img/cacto.webm" type="video/webm">
-    </video>
+  <h3 id="wink-animation">Wink - Animation</h3>
+  <video controls loop poster="https://io76.com/img/wink-preview.jpg" width="100%">
+    <source src="https://io76.com/img/wink.mp4" type="video/mp4">
+    <source src="https://io76.com/img/wink.webm" type="video/webm">
+  </video>
 
-    <img src="img/ccr-pdf.png" />
+  <h3 id="xmas-card">Xmas-Card</h3>
+  <p><img src="https://io76.com/img/xmas-card.jpg" alt="xmas-card"></p>
+  <h3 id="mushrooms">Mushrooms</h3>
+  <p><img src="https://io76.com/img/mush_big.jpg" alt="mushrooms and aliens"></p>
 
-    <img src="img/comic-p2.jpg" />
-
-    <img src="img/comic-p4.jpg" />
-
-    <img src="img/dec.jpg" />
-
-    <img src="img/anthrax1.jpg" />
-
-    <img src="img/anthrax2.jpg" />
-
-    <img src="img/anthrax3.jpg" />
-
-    <img src="img/dreamfish.jpg" />
-
-    <img src="img/ecotz.png" />
-
-    <img src="img/efta-after.jpg" />
-
-    <video controls loop poster="img/harmony.jpg">
-        <source src="img/harmony.mp4" type="video/mp4">
-        <source src="img/harmony.webm" type="video/webm">
-    </video>
-
-    <img src="img/jam.png" />
-
-    <img src="img/jun.jpg" />
-
-    <img src="img/lake-natron.png" />
-
-    <img src="img/man.jpg" />
-
-    <img src="img/mar.jpg" />
-
-    <img src="img/market-driver.jpg" />
-
-    <img src="img/mawemawe.png" />
-
-    <img src="img/moivaro-t.jpg" />
-
-    <img src="img/moivaro.jpg" />
-
-    <img src="img/njiro_complex.gif" />
-
-    <img src="img/oct.jpg" />
-
-    <img src="img/poster-2013.jpg" />
-
-
-    <video controls loop poster="img/robot-preview.jpg">
-        <source src="img/robot.mp4" type="video/mp4">
-        <source src="img/robot.webm" type="video/webm">
-    </video>
-
-
-    <img src="img/sangananu-card.jpg" />
-
-    <img src="img/square-poster.jpg" />
-
-    <video controls loop poster="img/stick-loop.jpg">
-        <source src="img/stick-loop.mp4" type="video/mp4">
-        <source src="img/stick-loop.webm" type="video/webm">
-    </video>
-
-    <video controls loop poster="img/stressed_ecard.jpg">
-        <source src="img/stressed_ecard.mp4" type="video/mp4">
-        <source src="img/stressed_ecard.webm" type="video/webm">
-    </video>
-
-    <img src="img/sv1.jpg" />
-
-    <img src="img/sv2.jpg" />
-
-    <img src="img/sv3.jpg" />
-
-    <img src="img/sv4.jpg" />
-
-    <img src="img/sv5.jpg" />
-
-    <video controls loop poster="img/tazama.gif">
-        <source src="img/tazama.mp4" type="video/mp4">
-        <source src="img/tazama.webm" type="video/webm">
-    </video>
-
-    <img src="img/treetop-logo.jpg" />
-
-    <img src="img/treetops-banner-v2.jpg" />
-
-    <img src="img/p4.jpg" />
-
-    <img src="img/ulla-nova-wide.gif" />
-
-    <img src="img/umoja.jpg" />
-
-    <video controls loop poster="img/wink-preview.jpg">
-      <source src="img/wink.mp4" type="video/mp4">
-      <source src="img/wink.webm" type="video/webm">
-    </video>
-
-    <img src="img/xmas-card.jpg" />
-
-	<img src="img/mush_big.jpg" />
-
-	<p class="pink">--</p>
-	<br>
+  <p class="pink">--</p>
+  <br>
 </div>
 
 </body>
